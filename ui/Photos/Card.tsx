@@ -10,7 +10,7 @@ const CARD = {
   HEIGHT: 287,
 };
 
-export const Card = ({ style, data }: CardProps) => {
+export const PhotoCard = ({ style, data }: CardProps) => {
   const { albumId, id, title, url, thumbnailUrl } = data;
 
   return (

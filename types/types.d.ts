@@ -1,5 +1,5 @@
 declare module "@type-buca" {
-  interface CardData {
+  interface Asset {
     id: string;
     x: number;
     y: number;
@@ -9,10 +9,10 @@ declare module "@type-buca" {
     price: number;
     view: number;
     src: string;
-    detail: CardDetailData;
+    detail: AssetDetail;
   }
 
-  interface CardDetailData {
+  interface AssetDetail {
     지번주소: string;
     주용도: string;
     건물유형: string;
