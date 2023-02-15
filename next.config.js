@@ -5,9 +5,6 @@ const nextConfig = {
     domains: ["picsum.photos", "via.placeholder.com"],
   },
   swcMinify: true,
-  experimental: {
-    appDir: true,
-  },
 };
 
 module.exports = nextConfig;
