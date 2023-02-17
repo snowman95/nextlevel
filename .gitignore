@@ -38,3 +38,4 @@ next-env.d.ts
 # etc
 package-lock.json
 .vscode/settings.json
+.env

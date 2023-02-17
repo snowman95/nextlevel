@@ -5,6 +5,7 @@ import { useApollo } from "@/config/gqlClient";
 import ClientOnly from "@/ui/ClientOnly";
 import { NextPage } from "next";
 import { ReactElement, ReactNode } from "react";
+import { SessionProvider } from "next-auth/react";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -21,7 +22,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <ApolloProvider client={apolloClient}>
-      <ClientOnly>{getLayout(<Component {...pageProps} />)}</ClientOnly>
+      <SessionProvider session={pageProps.session}>
+        <ClientOnly>{getLayout(<Component {...pageProps} />)}</ClientOnly>
+      </SessionProvider>
     </ApolloProvider>
   );
 }
